@@ -1,0 +1,18 @@
+# Editable install with no version control (astro-application-transfer==0.1.0)
+-e /home/user/astro_application_transfer
+PyYAML==6.0.3
+Pygments==2.21.0
+cloudpickle==3.1.2
+iniconfig==2.3.0
+joblib==1.6.0
+narwhals==2.26.0
+numpy==2.5.3
+nvidia-nccl-cu13==2.32.3
+packaging==26.3
+pluggy==1.6.0
+pytest==9.1.1
+rebound==5.2.0
+scikit-learn==1.9.1
+scipy==1.18.1
+threadpoolctl==3.7.0
+xgboost==3.4.1

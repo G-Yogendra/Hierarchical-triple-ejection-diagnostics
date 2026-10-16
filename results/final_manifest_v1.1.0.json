@@ -1,0 +1,73 @@
+{
+  "manifest_version": "1.1.0",
+  "status": "RELEASE_CANDIDATE_APPLICATION_LAYER",
+  "base_release": {
+    "tag": "v1.0.3",
+    "commit": "2cc2cd705eb3b9017d2b56f9af85b2fc18be4432",
+    "immutable": true
+  },
+  "scientific_change_to_v1_0_3": false,
+  "application_artifact_registry": {
+    "path": "application_data/artifact_registry.json",
+    "sha256": "48739bcf2c5aa0f34aee2fec498d7ada45c9fcdb4c78ca348a877df91f4b43c9",
+    "files": 48
+  },
+  "script_registry": {
+    "path": "workflows/application/SCRIPT_REGISTRY.json",
+    "sha256": "cca48c02aab56311e27bf29becbf789ba75402d6b74e25e2d287094db1e7085f",
+    "scripts": 8
+  },
+  "row_counts": {
+    "ABSOLUTE_METRIC_INTERVALS.csv": 150,
+    "PAIRED_BASELINE_INTERVALS.csv": 60,
+    "FAILURE_COMPETING_SENSITIVITY.csv": 105,
+    "SENSITIVITY_ENVELOPES.csv": 15
+  },
+  "external_artifacts": {
+    "schema": "application-external-artifacts-1.0",
+    "source_array": {
+      "dataset": "klienm/mergedtriples",
+      "relative_path": "mergedtriples/merged_triples.npz",
+      "bytes": 1817502996,
+      "sha256": "187835e0b45964f8ef0c295952eb49569ce5a5f9c9ec779e490d35f7aa352687"
+    },
+    "targets": {
+      "compact": "klienm/compact-application-10000",
+      "field": "klienm/field-application-10000",
+      "young": "klienm/young-cluster-application-10000"
+    },
+    "transfer": "klienm/transfer-analysis",
+    "post_analysis": "klienm/post-analysis",
+    "large_artifact_policy": "external versioned datasets; verify internal FILE_MANIFEST.json before use"
+  },
+  "tests": {
+    "application_contract_files": 3,
+    "required_full_suite_status": "pass before tag"
+  },
+  "claim_boundary": "engineering proxies only; no realistic-population, PN/GW, merger-rate, individual-system, or full-cluster claim",
+  "r1_archival_launchers": {
+    "status": "recovered_exact_bytes_verified",
+    "note": "Previously declared but unmatched R1 identities, now matched byte-for-byte. No substitute or renamed file was used. The embedded simulation package is carried inside both scripts; the decoded binary is not committed separately.",
+    "files": {
+      "workflows/kaggle/KAGGLE_COMPACT_SELFCONTAINED_10000.py": {
+        "bytes": 1105706,
+        "sha256": "41009d2f2664748ecc43cea7fbda5bfca0d9e6f70d80ddae206e430ce80247d3"
+      },
+      "workflows/kaggle/KAGGLE_STELLAR_SELFCONTAINED_10000.py": {
+        "bytes": 1105829,
+        "sha256": "3d86f4fb43e868b154a19475039bbc40260ef8f49847651450e9b6763b101cae"
+      }
+    },
+    "embedded_package": {
+      "bytes": 816912,
+      "sha256": "6885ee927831e2491717319d5da39597a725d225932a234a291ce32cb3c19261",
+      "identical_from_both_scripts": true,
+      "committed_separately": false
+    },
+    "container_handoff": {
+      "name": "R1_EXACT_ARTIFACTS_RECOVERED.zip",
+      "bytes": 2499933,
+      "sha256": "1db10089709571522f999369aba8f8d549083eee1bdd5037537f511d8aa9baa4"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+                python-version: ['3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install package and tests
+        run: python -m pip install -e '.[dev]'
+      - name: Run test suite (invariance, mask, schema, compilation, release)
+        run: pytest
+      - name: Compile all workflow and generator scripts
+        run: |
+          for f in workflows/kaggle/*.py workflows/final/*.py workflows/application/*.py scripts/*.py; do
+            [ -e "$f" ] || continue
+            python -m py_compile "$f"
+          done
+      - name: Verify v1.1.0 application artifact registry
+        run: python workflows/application/verify_release.py
+
+  pinned-env:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install pinned release environment
+        run: |
+          python -m pip install -r requirements-release.txt
+          python -m pip install -e . --no-deps
+      - name: Run test suite under pins
+        run: pytest

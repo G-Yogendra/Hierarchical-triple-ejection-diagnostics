@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1",
+  "name": "source_reference",
+  "population_code": 101,
+  "campaign_seed": 42,
+  "seed_contract": "a1_exact_entropy_words_[42,system_id]",
+  "calibration_status": "frozen_a1_reference",
+  "production_allowed": true,
+  "sampler": "source_reference",
+  "endpoint_outer_periods": 300.0,
+  "n_per_orbit": 20,
+  "timeout_seconds": 900.0,
+  "ias15_epsilon": 1e-9,
+  "collision_policy": "stellar_mass_radius",
+  "mass_range_msun": [0.5, 2.0],
+  "a_inner_range_au": [0.8, 1.2],
+  "a_outer_range_au": [3.0, 12.0],
+  "e_inner_range": [0.0, 0.4],
+  "e_outer_range": [0.0, 0.7],
+  "mutual_inclination_deg": [0.0, 60.0],
+  "horizons": [0.05, 0.15, 0.30, 0.50, 0.75],
+  "source": {
+    "release": "v1.0.3",
+    "generator_role": "frozen A1 controlled population",
+    "core_sha256": "de07bbc2bbdb52f0aa4f84336d4e8f85f9f16885c43c10e8e46426fef7b6b342",
+    "features_sha256": "3d6f682d3380963cc67d268d72fb80d54df682453361b243b5d5f2bb4de7ad69"
+  }
+}

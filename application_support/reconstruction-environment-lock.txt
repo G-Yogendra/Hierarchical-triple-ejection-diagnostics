@@ -1,0 +1,7 @@
+# A1 deterministic source-model reconstruction environment
+# Run under CPython 3.12.x exactly.
+numpy==2.5.3
+scikit-learn==1.9.1
+xgboost==3.4.1
+rebound==5.2.0
+PyYAML==6.0.3

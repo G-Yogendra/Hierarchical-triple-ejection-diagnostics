@@ -1,0 +1,86 @@
+% A1 ApJ submission manuscript skeleton -- ANONYMOUS for dual-anonymous review.
+% Structure owned by the repository agent; prose, numbers, and figures owned by
+% the manuscript agent. Do NOT add author names, affiliations, emails, grant
+% numbers, or repository URLs containing usernames until acceptance.
+% CI enforces anonymity (tests/test_release_consistency.py).
+\documentclass[twocolumn]{aastex631}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+\newcommand{\Tout}{T_{\rm out}}
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+
+\begin{document}
+
+\title{Causal Early-Warning Diagnostics for Finite-Time Ejection in Hierarchical Triple Systems}
+
+\author{Anonymous}
+\affiliation{Affiliations withheld for dual-anonymous review.}
+
+\begin{abstract}
+Hierarchical triples exhibit chaotic evolution that complicates the prediction of
+disruption and escaper identity. We test whether initial conditions and causal
+dynamical summaries measured at fixed physical-time horizons can predict
+finite-time ejection without using post-horizon information, and we study flyby,
+exchange, and ionization in binary--single encounters. We integrate
+$5\times10^5$ hierarchical triples with REBOUND/IAS15 to $300\,\Tout$, evaluate
+a separate $10^5$-system near-boundary suite, simulate $10^6$ binary--single
+encounters, and re-integrate a matched $10^5$-system deep tail to
+$3000\,\Tout$ to quantify right-censoring. Models are evaluated only on systems
+still in play at each horizon. \todo{Insert final leakage-safe headline numbers.}
+Dynamical windows add increasing information beyond initial conditions at later
+horizons; inner-member ejections are substantially easier to identify than
+outer-member ejections, while encounter ionization becomes distinguishable
+primarily near periastron. Stable labels are right-censored at the integration
+cutoff, not claims of perpetual stability.
+\end{abstract}
+
+\keywords{celestial mechanics -- methods: numerical -- methods: statistical --
+binaries: general -- stars: kinematics and dynamics}
+
+\section{Introduction}
+\label{sec:introduction}
+\input{sections/introduction}
+
+\section{Numerical experiments}
+\label{sec:simulations}
+\input{sections/simulations}
+
+\section{Causal diagnostics and validation}
+\label{sec:methods}
+\input{sections/methods}
+
+\section{Results}
+\label{sec:results}
+\input{sections/results}
+
+\section{Discussion}
+\label{sec:discussion}
+\input{sections/discussion}
+
+\section{Conclusions}
+\label{sec:conclusions}
+\input{sections/conclusions}
+
+\begin{acknowledgements}
+\todo{Add computing and software acknowledgements after acceptance.}
+\end{acknowledgements}
+
+\section*{Data Availability}
+The frozen analysis code and machine-readable derived results are available in a
+versioned repository; the review-stage reference is provided privately to the
+editor and referees as required by dual-anonymous review. The multi-gigabyte
+simulation products will be deposited in a versioned Zenodo archive upon
+acceptance and are available to the editor and referees during review.
+\todo{Insert public repository URL, frozen commit, and Zenodo DOI on acceptance.}
+
+\software{REBOUND \citep{ReinLiu2012,ReinSpiegel2015}, scikit-learn, XGBoost,
+  lifelines, NumPy, Matplotlib.}
+
+\bibliographystyle{aasjournal}
+\bibliography{references}
+
+\end{document}

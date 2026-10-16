@@ -1,0 +1,55 @@
+{
+  "registry": "v1.1.0 application-transfer scripts",
+  "target_directory": "workflows/application",
+  "source_release": "v1.0.3",
+  "scripts": [
+    {
+      "name": "fetch_public_baselines.py",
+      "sha256": "b15ef15fe51daa3a6e7530d4fcfada03020c52ca99798b2a2adb4fac9cf15a9f",
+      "status": "received",
+      "role": "see docs/APPLICATION_CODE_INDEX.md"
+    },
+    {
+      "name": "legacy_baseline_predict.py",
+      "sha256": "0efbe5b368b5c84d6dd0422a27b0db177058cd7abf7aa832280b8e6ef0cef5de",
+      "status": "received",
+      "role": "see docs/APPLICATION_CODE_INDEX.md"
+    },
+    {
+      "name": "make_application_figures.py",
+      "sha256": "e4eb40637de16635a334670c04cb9ac0c8bf21f8ba148ea614d64ec6eebbf387",
+      "status": "received",
+      "role": "see docs/APPLICATION_CODE_INDEX.md"
+    },
+    {
+      "name": "reconstruct_source_models.py",
+      "sha256": "7217ecab924748706d299bf19559ba868679f9ca9e5a41a28f0dc0f76aaa2436",
+      "status": "received",
+      "role": "see docs/APPLICATION_CODE_INDEX.md"
+    },
+    {
+      "name": "run_post_analysis_addendum.py",
+      "sha256": "1d3d7c9863da4167b2c53b4b75b1609b5c9290f44fe80106ad5db8f6322eaab5",
+      "status": "received",
+      "role": "see docs/APPLICATION_CODE_INDEX.md"
+    },
+    {
+      "name": "run_target_simulation.py",
+      "sha256": "f7e419225fddbcaa110352c11d3b50ad58c4d4a2bde2cdf0eff90c4a410a2d02",
+      "status": "received",
+      "role": "see docs/APPLICATION_CODE_INDEX.md"
+    },
+    {
+      "name": "run_transfer_analysis.py",
+      "sha256": "6007d0370a082cdee285bed7d664999190781ca5b55e5e4c846376c611319bfb",
+      "status": "received",
+      "role": "see docs/APPLICATION_CODE_INDEX.md"
+    },
+    {
+      "name": "verify_release.py",
+      "sha256": "0d68adea093a998acfa4ee19434d84aef10106c36a1a2d9efc8fc0985bcbfdab",
+      "status": "received",
+      "role": "see docs/APPLICATION_CODE_INDEX.md"
+    }
+  ]
+}
